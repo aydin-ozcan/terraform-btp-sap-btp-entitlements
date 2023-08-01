@@ -23,7 +23,7 @@ resource "btp_subaccount" "subaccount" {
 
 module "sap-btp-entitlements" {
   source  = "aydin-ozcan/sap-btp-entitlements/btp"
-  version = "1.0.0"
+  version = "1.0.1"
 
   subaccount = btp_subaccount.subaccount.id
   

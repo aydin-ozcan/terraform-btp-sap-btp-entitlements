@@ -22,8 +22,11 @@ resource "btp_subaccount" "subaccount" {
 
 
 module "sap-btp-entitlements" {
-  source = "aydin-ozcan/sap-btp-entitlements"
+  source  = "aydin-ozcan/sap-btp-entitlements/btp"
+  version = "1.0.0"
+
   subaccount = btp_subaccount.subaccount.id
+  
   entitlements = {
     "xsuaa"                  = ["application"],
     "kymaruntime"            = ["trial=1"],

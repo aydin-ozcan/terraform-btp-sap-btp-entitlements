@@ -43,13 +43,18 @@ To address the challenges I have developed a Terraform module specifically for m
 
 ```hcl
 module "sap-btp-entitlements" {
- source = "aydin-ozcan/sap-btp-entitlements"
- entitlements = {
-   "alert-notification"     = ["standard"],
-   "application-logs"       = ["lite"],
-   "xsuaa"                  = ["application", "broker"],
-   "kymaruntime"            = ["trial=1"],  
-   "APPLICATION_RUNTIME"    = ["MEMORY=1"]  # Cloud Foundry and Kyma needs to specify amount even if it is 1
+  
+  source  = "aydin-ozcan/sap-btp-entitlements/btp"
+  version = "1.0.0"
+
+  subaccount = <subaccountid>
+
+  entitlements = {
+    "alert-notification"     = ["standard"],
+    "application-logs"       = ["lite"],
+    "xsuaa"                  = ["application", "broker"],
+    "kymaruntime"            = ["trial=1"],  
+    "APPLICATION_RUNTIME"    = ["MEMORY=1"]  # Cloud Foundry and Kyma needs to specify amount even if it is 1
  }
 }
 ```

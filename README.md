@@ -9,7 +9,7 @@ In this blog post, I will introduce you to a Terraform module that I developed t
 
 Terraform modules are self-contained packages of Terraform configurations that act as building blocks for your infrastructure. They provide a way to encapsulate complexity and promote reusability across different projects. By creating a dedicated module for managing entitlements, we can simplify the overall Terraform codebase and improve its maintainability.
 
-## The Traditional Approach to Entitlement Creation
+## Entitlement Creation
 
 Let's take a look at how traditional resource creation for entitlements would look like with the [SAP BTP Terraform provider](https://registry.terraform.io/providers/SAP/btp/):
 

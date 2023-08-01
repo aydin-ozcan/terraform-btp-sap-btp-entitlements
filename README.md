@@ -37,7 +37,7 @@ resource "btp_subaccount_entitlement" "xsuaa_broker" {
 
 As you can see, for each service and each plan offered by the service, you need to create separate resources. This can lead to a considerable amount of repetitive code and increased chances of errors.
 
-## Introducing the SAP BTP Entitlements Module
+## SAP BTP Entitlements Module
 
 To address the challenges I have developed a Terraform module specifically for managing entitlements in SAP BTP. sap-btp-entitlements module provides elegant and efficient way to describe your entitlements. Let's take a look at how it works:
 
@@ -62,7 +62,7 @@ You can easily access and initialize the [sap-btp-entitlements](https://registry
 
 The module's source code and additional usage examples can be found on GitHub at the following repository:
 
-[GitHub Repository - SAP BTP Entitlements](https://github.com/aydin-ozcan/sap-btp-entitlements)
+[GitHub Repository - SAP BTP Entitlements](https://github.com/aydin-ozcan/terraform-btp-sap-btp-entitlements)
 
 
 [SAP BTP Terraform provider](https://registry.terraform.io/providers/SAP/btp/) offers a robust solution for professional infrastructure management.
